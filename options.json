@@ -1,36 +1,84 @@
 {
-    "title": "我的配置文件",
+    "title": "配置文件",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "properties":{
-        "AuthOptions":{
-             "properties": {
-                 "Host":{
-                     "type":"string",
-                     "description": "auth网站地址"
-                 }
-             }
+    "properties": {
+        "AuthOptions": {
+            "type": "object",
+            "description": "配置文件",
+            "properties": {
+                "Host": {
+                    "type": "string",
+                    "description": "auth网站地址"
+                }
+            }
         },
-        "StorageOptions":{
-            "type":"object",
+        "StorageOptions": {
+            "type": "object",
             "description": "数据库配置文件",
             "properties": {
-                "ConnectionString":{
-                    "type":"string"
-                    ,"description": "数据库连接"
-                    
+                "ConnectionString": {
+                    "type": "string",
+                    "description": "数据库连接"
                 },
-                "TimeoutSeconds":{
-                    "type":"integer"
-                    ,"description": "超时秒数",
-                    "default":10
+                "TimeoutSeconds": {
+                    "type": "integer",
+                    "description": "超时秒数",
+                    "default": 10
+                }
+            }
+        },
+        "AliyunOptions": {
+            "type": "object",
+            "description": "阿里云接口访问配置",
+            "properties": {
+                "AppKey": {
+                    "type": "string",
+                    "description": "接口appKey"
+                },
+                "AppSecret": {
+                    "type": "string",
+                    "description": "接口AppSecret"
+                },
+                "AppCode": {
+                    "type": "string",
+                    "description": "接口AppCode"
+                },
+                "AuthMode": {
+                    "type": "string",
+                    "description": "接口验证模式",
+                    "enum": [
+                        "Sign",
+                        "Code"
+                    ]
+                }
+            }
+        },
+        "LYApiOptions": {
+            "type": "object",
+            "description": "力洋接口访问配置",
+            "properties": {
+                "AppKey": {
+                    "type": "string",
+                    "description": "接口appKey"
+                },
+                "AppSecret": {
+                    "type": "string",
+                    "description": "接口AppSecret"
+                },
+                "RequestFormat": {
+                    "type": "string",
+                    "description": "返回格式",
+                    "enum": [
+                        "json",
+                        "xml"
+                    ]
+                },
+                "Host": {
+                    "type": "string",
+                    "description": "网站地址"
                 }
             }
         }
-
     }
-  
-
-
-
 }
