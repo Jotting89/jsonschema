@@ -2,7 +2,7 @@
     "title": "我的配置文件",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "definitions":{
+    "properties":{
         "AuthOptions":{
              "properties": {
                  "Host":{
