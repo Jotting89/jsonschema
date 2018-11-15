@@ -1,0 +1,34 @@
+{
+    "title": "我的配置文件",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "definitions":{
+        "AuthOptions":{
+             "properties": {
+                 "Host":{
+                     "type":"string",
+                     "description": "auth网站地址"
+                 }
+             }
+        },
+        "StorageOptions":{
+            "properties": {
+                "ConnectionString":{
+                    "type":"string"
+                    ,"description": "数据库连接"
+                    
+                },
+                "TimeoutSeconds":{
+                    "type":"integer"
+                    ,"description": "超时秒数",
+                    "default":10
+                }
+            }
+        }
+
+    }
+  
+
+
+
+}
